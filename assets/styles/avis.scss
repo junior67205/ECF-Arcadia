@@ -1,0 +1,63 @@
+@import "./custom.scss";
+@import "./variables.scss";
+
+/* avis */
+
+.review .box-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review .box {
+  background: $creme;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.review .box i {
+  font-size: 20px;
+  color: $bleu;
+}
+
+.review .box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  padding-top: 10px;
+}
+
+.review .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.review .box .info .name {
+  font-weight: 600;
+  font-size: 17px;
+}
+.review .box .info .date {
+  font-size: 16px;
+  font-weight: 500;
+  color: $bleu;
+}
+
+@media (max-width: 1045px) {
+  .review .box-container .box {
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .review .box-container .box {
+    width: 100%;
+  }
+}
