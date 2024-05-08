@@ -11,6 +11,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: TypeOfServicesRepository::class)]
+#[Vich\Uploadable]
 class TypeOfServices
 {
     #[ORM\Id]
@@ -31,7 +32,7 @@ class TypeOfServices
     private ?\DateTimeImmutable $updateAt = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $label = null;
+    private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -120,14 +121,14 @@ class TypeOfServices
         return $this;
     }
 
-    public function getLabel(): ?string
+    public function getTitle(): ?string
     {
-        return $this->label;
+        return $this->title;
     }
 
-    public function setLabel(string $label): static
+    public function setTitle(string $title): static
     {
-        $this->label = $label;
+        $this->title = $title;
 
         return $this;
     }

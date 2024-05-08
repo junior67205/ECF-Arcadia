@@ -18,7 +18,7 @@ class Services
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $label = null;
+    private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -36,7 +36,6 @@ class Services
     private ?\DateTimeImmutable $updateAt = null;
 
     #[ORM\ManyToOne(inversedBy: 'services')]
-    #[ORM\JoinColumn(nullable: false)]
     private ?TypeOfServices $typeofservices = null;
 
     public function getId(): ?int
@@ -44,14 +43,14 @@ class Services
         return $this->id;
     }
 
-    public function getLabel(): ?string
+    public function getTitle(): ?string
     {
-        return $this->label;
+        return $this->title;
     }
 
-    public function setLabel(string $label): static
+    public function setTitle(string $title): static
     {
-        $this->label = $label;
+        $this->title = $title;
 
         return $this;
     }

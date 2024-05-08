@@ -133,32 +133,15 @@
         <h2 class="heading">Nos services</h2>
 
             <div class="box-container">
-
+                {% for typeOfService in typeOfServices %}
                 <div class="box">
-                    <img class="img-area"src="{{ asset('../build/images/restauration.jpg') }}" alt="">
+                    <img class="img-area"src="{{ asset('uploads/photoTypeDeServices/' ~ typeOfService.imageName) }}" alt="">
                     <div class="img-text">
-                        <span class="header-text"><strong>Restauration</strong></span>
-                        <p>Notre zoo comporte plusieur zone de restauration en fonction de l'endroit</p>
+                        <span class="header-text"><strong>{{ typeOfService.title }}</strong></span>
+                        <p>{{ typeOfService.description }}</p>
                     </div>
                 </div>
-
-
-                <div class="box">
-                    <img class="img-area"src="{{ asset('../build/images/restauration.jpg') }}" alt="">
-                    <div class="img-text">
-                        <span class="header-text"><strong>Visite</strong></span>
-                        <p>Notre zoo comporte plusieurs façon de vous faire découvrir notre univers</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <img class="img-area"src="{{ asset('../build/images/restauration.jpg') }}" alt="">
-                    <div class="img-text">
-                        <span class="header-text"><strong>Immersion</strong></span>
-                        <p>Vous pourrez voir nos animaux au plus près grace à notre personnels</p>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
     
     </section>
