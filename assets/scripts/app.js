@@ -2,4 +2,5 @@
 
 import "../styles/app.scss";
 
-import "../scripts/animaux.js";
+import "./animals.js";
+import "./navbar.js";

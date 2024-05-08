@@ -1,0 +1,28 @@
+<!-- header -->
+
+    <header class="header">
+      <a href="{{ path('main') }}" class="logo"> <i class="fas fa-paw"></i> zoo</a>
+
+      <div class="menu">
+        <div class="icon">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="{{ path('main') }}">Acceuil</a>
+        <a href="#service">Services</a>
+        <a href="#habitat">Habitat</a>
+        <a href="#contact" >Contact</a>
+        <a href="#avis">Avis</a>
+        {% if app.user %}
+        <a class="icons" href="#admin"><i class="fa-solid fa-user-tie"></i></a>
+        <a class="icons" href="#logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+        {% else %}
+        <a class="icons" href="#login"><i class="fa-solid fa-user"></i></a>
+        {% endif %}
+      </div>
+
+      <div class="icon">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+
+    <!-- end -->
